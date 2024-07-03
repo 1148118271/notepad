@@ -17,25 +17,36 @@
    <iconset resource="images.qrc">
     <normaloff>:/images/resource/pencil.png</normaloff>:/images/resource/pencil.png</iconset>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPlainTextEdit" name="plainTextEdit">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>50</y>
+      <width>104</width>
+      <height>64</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>19</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuNotepad">
     <property name="title">
      <string>文件</string>
     </property>
-    <addaction name="newFile"/>
-    <addaction name="openFile"/>
+    <addaction name="new_file"/>
+    <addaction name="open_file"/>
     <addaction name="separator"/>
-    <addaction name="saveFile"/>
-    <addaction name="saveAs"/>
+    <addaction name="save_file"/>
+    <addaction name="save_as"/>
     <addaction name="separator"/>
     <addaction name="print"/>
     <addaction name="separator"/>
@@ -66,7 +77,76 @@
    <addaction name="menu_2"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="newFile">
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="new_file"/>
+   <addaction name="open_file"/>
+   <addaction name="save_file"/>
+   <addaction name="save_as"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_2">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="copy"/>
+   <addaction name="paste"/>
+   <addaction name="cut"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_3">
+   <property name="windowTitle">
+    <string>toolBar_3</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="bolder"/>
+   <addaction name="italic"/>
+   <addaction name="underline"/>
+   <addaction name="font"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_4">
+   <property name="windowTitle">
+    <string>toolBar_4</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="undo"/>
+   <addaction name="redo"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_5">
+   <property name="windowTitle">
+    <string>toolBar_5</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="about"/>
+  </widget>
+  <action name="new_file">
    <property name="icon">
     <iconset resource="images.qrc">
      <normaloff>:/images/resource/new.png</normaloff>:/images/resource/new.png</iconset>
@@ -81,7 +161,7 @@
     <enum>QAction::NoRole</enum>
    </property>
   </action>
-  <action name="openFile">
+  <action name="open_file">
    <property name="icon">
     <iconset resource="images.qrc">
      <normaloff>:/images/resource/open.png</normaloff>:/images/resource/open.png</iconset>
@@ -96,7 +176,7 @@
     <enum>QAction::NoRole</enum>
    </property>
   </action>
-  <action name="saveFile">
+  <action name="save_file">
    <property name="icon">
     <iconset resource="images.qrc">
      <normaloff>:/images/resource/save.png</normaloff>:/images/resource/save.png</iconset>
@@ -111,7 +191,7 @@
     <enum>QAction::NoRole</enum>
    </property>
   </action>
-  <action name="saveAs">
+  <action name="save_as">
    <property name="icon">
     <iconset resource="images.qrc">
      <normaloff>:/images/resource/save_as.png</normaloff>:/images/resource/save_as.png</iconset>
