@@ -18,13 +18,13 @@
     <normaloff>:/images/resource/pencil.png</normaloff>:/images/resource/pencil.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPlainTextEdit" name="plainTextEdit">
+   <widget class="QTextEdit" name="textEdit">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>50</y>
-      <width>104</width>
-      <height>64</height>
+      <x>30</x>
+      <y>30</y>
+      <width>211</width>
+      <height>171</height>
      </rect>
     </property>
    </widget>
@@ -35,7 +35,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>22</height>
+     <height>19</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuNotepad">
@@ -48,7 +48,6 @@
     <addaction name="save_file"/>
     <addaction name="save_as"/>
     <addaction name="separator"/>
-    <addaction name="print"/>
     <addaction name="separator"/>
     <addaction name="exit"/>
    </widget>
@@ -306,9 +305,6 @@
    </property>
   </action>
   <action name="font">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
    <property name="icon">
     <iconset resource="images.qrc">
      <normaloff>:/images/resource/font.png</normaloff>:/images/resource/font.png</iconset>
@@ -324,9 +320,6 @@
    </property>
   </action>
   <action name="about">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
    <property name="icon">
     <iconset resource="images.qrc">
      <normaloff>:/images/resource/info.png</normaloff>:/images/resource/info.png</iconset>
@@ -364,6 +357,9 @@
    <property name="text">
     <string>取消撤回</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Z</string>
+   </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>
    </property>
@@ -375,18 +371,6 @@
    </property>
    <property name="text">
     <string>退出</string>
-   </property>
-   <property name="menuRole">
-    <enum>QAction::NoRole</enum>
-   </property>
-  </action>
-  <action name="print">
-   <property name="icon">
-    <iconset resource="images.qrc">
-     <normaloff>:/images/resource/print.png</normaloff>:/images/resource/print.png</iconset>
-   </property>
-   <property name="text">
-    <string>打印</string>
    </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>
