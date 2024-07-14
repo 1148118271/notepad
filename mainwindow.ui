@@ -21,11 +21,27 @@
    <widget class="QTextEdit" name="textEdit">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>30</y>
+      <x>480</x>
+      <y>230</y>
       <width>211</width>
       <height>171</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>120</y>
+      <width>127</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="tabShape">
+     <enum>QTabWidget::Triangular</enum>
+    </property>
+    <property name="currentIndex">
+     <number>-1</number>
     </property>
    </widget>
   </widget>
@@ -35,7 +51,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>19</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuNotepad">
