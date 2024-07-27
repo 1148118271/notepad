@@ -1,6 +1,4 @@
-#include "mytextedit.h"
-#include "ui_mytextedit.h"
-#include <iostream>
+#include "MyTextEdit.h"
 
 MyTextEdit::MyTextEdit(QWidget *parent)
     : QWidget(parent)
@@ -13,6 +11,10 @@ MyTextEdit::MyTextEdit(QWidget *parent)
 
     // 初始化字体
     initFont();
+
+    // 初始化高亮
+    initHighlighter();
+
 }
 
 MyTextEdit::~MyTextEdit() {
@@ -71,5 +73,10 @@ void MyTextEdit::textEditVScrollBarChanged() {
 
 void MyTextEdit::textBrowserVScrollBarChanged() {
     ui->textEdit->verticalScrollBar()->setValue(ui->textBrowser->verticalScrollBar()->value());
+}
+
+void MyTextEdit::initHighlighter() {
+    new MyHighlighter(ui->textEdit->document());
+//    MyHighlighter highlighter(ui->textEdit->document());
 }
 

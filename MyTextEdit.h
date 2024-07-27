@@ -1,5 +1,8 @@
 #pragma once
 
+#include "ui_mytextedit.h"
+#include "MyHighlighter.h"
+#include <iostream>
 #include <QWidget>
 
 namespace Ui {
@@ -23,6 +26,7 @@ private slots:
 private:
     void initConnect();
     void initFont();
+    void initHighlighter();
 
 private:
     Ui::MyTextEdit *ui;

@@ -1,5 +1,5 @@
-#include "mainwindow.h"
-#include "mytextedit.h"
+#include "MainWindow.h"
+#include "MyTextEdit.h"
 #include "ui_mainwindow.h"
 #include <QDebug>
 #include <QFileDialog>
@@ -19,7 +19,7 @@ MainWindow::~MainWindow() {
 void MainWindow::on_new_file_triggered() {
 //    this->currentFile.clear();
 //    this->ui->textEdit->setText("");
-    MyTextEdit *myTextEdit = new MyTextEdit(this);
+    auto *myTextEdit = new MyTextEdit(this);
     this->ui->tabWidget->addTab(myTextEdit, "newFile.txt");
 
 }
