@@ -16,11 +16,8 @@ protected:
     void highlightBlock(const QString &text) override;
 
 private:
-
     QString mFontFamily = "Consolas";
     int mFontSize = 14;
-
-    int offset = 0;
 
     struct HighlightRule {
         QRegularExpression pattern;

@@ -77,6 +77,5 @@ void MyTextEdit::textBrowserVScrollBarChanged() {
 
 void MyTextEdit::initHighlighter() {
     new MyHighlighter(ui->textEdit->document());
-//    MyHighlighter highlighter(ui->textEdit->document());
 }
 
